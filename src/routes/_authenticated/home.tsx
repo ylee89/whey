@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { ProgressRing } from "@/components/ProgressRing";
 import { Avatar } from "@/components/Avatar";
-import { startOfTodayISO } from "@/lib/goals";
+import { startOfTodayISO } from "@/lib/goal";
 import { Check, Plus, Utensils } from "lucide-react";
 import { useT } from "@/lib/i18n";
 
