@@ -1,0 +1,17 @@
+{
+  "name": "whey-devcontainer",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "features": {
+    "ghcr.io/devcontainers/features/git-lfs:1": {},
+    "ghcr.io/devcontainers-contrib/features/bun:1": {}
+  },
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "vite-dev-server",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "postCreateCommand": "npm install",
+  "postAttachCommand": "bash -lc 'FORWARDED=\"${FORWARDED_PORT:-5173}\"; bun run dev -- --port \"$FORWARDED\"'"
+}
